@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function App() {
+export default function App () {
   const [result, setResult] = useState("");
 
   const handleClick = (val) => setResult(result + val);
