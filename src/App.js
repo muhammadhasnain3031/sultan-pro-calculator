@@ -50,3 +50,4 @@ window.App = function App() {
     </div>
   );
 }
+export default App;
