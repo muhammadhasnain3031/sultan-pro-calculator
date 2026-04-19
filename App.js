@@ -15,55 +15,37 @@ export default function App() {
     }
   };
 
-  // Modern Button Style
   const btnBase = "relative flex items-center justify-center text-xl font-medium rounded-2xl h-14 w-full transition-all duration-200 active:scale-95 shadow-md border border-white/10";
 
   return (
-    <div className="min-h-screen bg-[#0f172a] flex flex-col items-center justify-center p-4">
-      
-      {/* Container with Glass Effect */}
+    <div className="min-h-screen bg-[#0f172a] flex flex-col items-center justify-center p-4 font-sans">
       <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/20 w-full max-w-[320px]">
-        
         <h2 className="text-blue-400 text-xs font-bold tracking-[0.2em] uppercase mb-6 text-center">Sultan Analytics</h2>
-
-        {/* Display Screen */}
         <div className="bg-slate-900/50 p-6 rounded-3xl mb-8 border border-blue-500/30 shadow-inner">
-          <div className="text-blue-300/50 text-xs text-right h-4 mb-1 font-mono tracking-widest uppercase">Result</div>
           <div className="text-white text-4xl font-semibold truncate text-right tracking-tight">
             {result || "0"}
           </div>
         </div>
-
-        {/* Buttons Grid */}
         <div className="grid grid-cols-4 gap-4">
-          <button onClick={clear} className={`${btnBase} bg-red-500/20 text-white-300 hover:bg-red-500/30 col-span-2`}>CLEAR</button>
-          <button onClick={deleteLast} className={`${btnBase} bg-slate-700 text-white hover:bg-slate-600`}>DEL</button>
-          <button onClick={() => handleClick("/")} className={`${btnBase} bg-blue-600/20 text-blue-400 hover:bg-blue-600/40 font-bold text-2xl`}>÷</button>
-
+          <button onClick={clear} className={`${btnBase} bg-red-500/20 text-red-400 hover:bg-red-500/30 col-span-2 text-sm`}>CLEAR</button>
+          <button onClick={deleteLast} className={`${btnBase} bg-slate-700 text-white hover:bg-slate-600 text-sm`}>DEL</button>
+          <button onClick={() => handleClick("/")} className={`${btnBase} bg-blue-600/20 text-blue-400 hover:bg-blue-600/40 text-2xl`}>÷</button>
           <button onClick={() => handleClick("7")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>7</button>
           <button onClick={() => handleClick("8")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>8</button>
           <button onClick={() => handleClick("9")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>9</button>
-          <button onClick={() => handleClick("*")} className={`${btnBase} bg-blue-600/20 text-blue-400 hover:bg-blue-600/40 font-bold text-2xl`}>×</button>
-
+          <button onClick={() => handleClick("*")} className={`${btnBase} bg-blue-600/20 text-blue-400 hover:bg-blue-600/40 text-2xl`}>×</button>
           <button onClick={() => handleClick("4")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>4</button>
           <button onClick={() => handleClick("5")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>5</button>
           <button onClick={() => handleClick("6")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>6</button>
-          <button onClick={() => handleClick("-")} className={`${btnBase} bg-blue-600/20 text-blue-400 hover:bg-blue-600/40 font-bold text-2xl`}>−</button>
-
+          <button onClick={() => handleClick("-")} className={`${btnBase} bg-blue-600/20 text-blue-400 hover:bg-blue-600/40 text-2xl`}>−</button>
           <button onClick={() => handleClick("1")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>1</button>
           <button onClick={() => handleClick("2")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>2</button>
           <button onClick={() => handleClick("3")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>3</button>
-          <button onClick={() => handleClick("+")} className={`${btnBase} bg-blue-600/20 text-blue-400 hover:bg-blue-600/40 font-bold text-2xl`}>+</button>
-
+          <button onClick={() => handleClick("+")} className={`${btnBase} bg-blue-600/20 text-blue-400 hover:bg-blue-600/40 text-2xl`}>+</button>
           <button onClick={() => handleClick("0")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>0</button>
           <button onClick={() => handleClick(".")} className={`${btnBase} bg-slate-800 text-slate-200 hover:bg-slate-700`}>.</button>
-          <button onClick={calculate} className={`${btnBase} bg-blue-500 text-white shadow-blue-500/40 hover:bg-blue-400 col-span-2 shadow-lg`}>=</button>
+          <button onClick={calculate} className={`${btnBase} bg-blue-500 text-white hover:bg-blue-400 col-span-2 shadow-lg shadow-blue-500/40`}>=</button>
         </div>
-      </div>
-
-      <div className="mt-10 flex items-center gap-2 text-slate-500">
-        <div className="h-1 w-1 rounded-full bg-green-500 animate-pulse"></div>
-        <p className="text-xs tracking-widest uppercase">System Operational</p>
       </div>
     </div>
   );
